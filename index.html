@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dashboard</title>
+   <!-- BOOTSTRAP CDN -->
+   <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+   <!-- FONT AWESOME CDN -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- STYLESHEET -->
+   <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+   <section id="menu">
+      <div class="container-fluid flex">
+         <div><a href="#">
+               <h3 style="color: white;margin:0.3rem;">ROVA</h3>
+            </a></div>
+         <div>
+            <i class="fa fa-2xl fa-house"></i><small>HOME</small>
+         </div>
+         <div><i class="fa fa-2xl fa-oil-well"></i><small>ACTIVE RIGS</small>
+         </div>
+         <div><i class="fa fa-tower-broadcast fa-2xl"></i><small>BROADCAST</small></div>
+         <div><i class="fa-brands fa-microsoft fa-2xl"></i><small>MY JOBS</small>
+         </div>
+      </div>
+      <div class="container-fluid flex">
+         <div>
+            <i class="fa-solid fa-user fa-2xl" style="padding: 5px; border-radius:50%"></i><small>USERNAME</small>
+         </div>
+         <div><i class="fa-solid fa-gear fa-2xl"></i><small>SETTINGS</small>
+         </div>
+         <div><i class="fa-solid fa-right-from-bracket fa-2xl"></i><small>LOGOUT</small></div>
+      </div>
+
+   </section>
+   <section id="main">
+      <h3>DASHBOARD</h3>
+
+      <div class="phase">
+         <h6>SELECT PHASE</h6>
+         <div class="container-fluid flex">
+            <div>RIG UP & SETUP &nbsp; <span>09</span></div>
+            <div>BHA & PU SHT &nbsp; <span>09</span></div>
+            <div>RUN IN HOLE &nbsp; <span>09</span></div>
+            <div>DRILLING &nbsp; <span>09</span></div>
+            <div>TRIP OUT &nbsp; <span>09</span></div>
+            <div>RIG DOWN &nbsp; <span>09</span></div>
+
+         </div>
+      </div>
+
+      <div class="rig-progress">
+         <h6>RIG PROGRESS</h6>
+         <!-- first -->
+         <div class="TL-wrapper">
+            <div style="display: flex;flex-direction:row;flex-wrap:wrap">
+               <div class="flex" style="flex-direction: row; flex-wrap:wrap">
+                  <span
+                     style="background: #47B5FF; border-radius:50%;color:aliceblue;display: flex;justify-content: center; align-items: center;height: 50px; width: 50px;"><strong>081</strong></span>
+                  <span><b>BRRI-1076<br>RIG 08</b></span>
+               </div>
+               <div class="container">
+                  <div class="timeline-horizontal">
+                     <div class="event completed">
+                        <span class="dot">
+                           <i class="fa-solid fa-check"></i>
+                        </span>
+                        <span class="stage-name">
+                           RIG UP <br><small>
+                              11:53AM 15/05/22
+                           </small>
+                        </span>
+                     </div>
+                     <div class="event completed">
+                        <span class="dot">
+                           <i class="fa-solid fa-check"></i>
+                        </span>
+                        <span class="stage-name">
+                           BHA PU & SHT <br><small>
+                              11:53AM 15/05/22
+                           </small>
+                        </span>
+                     </div>
+                     <div class="event completed">
+                        <span class="dot">
+                           <i class="fa-solid fa-check"></i>
+                        </span>
+                        <span class="stage-name">
+                           TRIP IN<br><small>
+                              11:53AM 15/05/22
+                           </small>
+                        </span>
+                     </div>
+                     <div class="event completed">
+                        <span class="dot">
+                           <i class="fa-solid fa-check"></i>
+                        </span>
+                        <span class="stage-name">
+                           DRILLING<br><small>
+                              11:53AM 15/05/22
+                           </small>
+                        </span>
+                     </div>
+                     <div class="event completed">
+                        <span class="dot">
+                           <i class="fa-solid fa-check"></i>
+                        </span>
+                        <span class="stage-name">
+                           TRIP OUT <br><small>
+                              11:53AM 15/05/22
+                           </small>
+                        </span>
+                     </div>
+                     <div class="event current">
+                        <span class="dot">
+                           <i class="fa-solid fa-ellipsis"></i>
+                        </span>
+                        <span class="stage-name">
+                           RIG DOWN <br><small>
+                              ONGOING
+                           </small>
+                        </span>
+                     </div>
+                  </div>
+                  <div class="dropdownbtn" style="margin: 1rem; z-index: 100;" onclick="show(this)">
+                     <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+               </div>
+            </div>
+
+            <div class="dropdown">
+               <div class="container listcontainer">
+                  <div>
+                     <ul>
+                        <li>RIG UP</li>
+                        <li>WELL SETUP</li>
+                        <li>PRIMARY TOOLS</li>
+                        <li>BACK UP TOOLS</li>
+                        <li>PRE RUN REPORTS</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <ul>
+                        <li>PU CHECKLIST</li>
+                        <li>RF VERIFICATION</li>
+                        <li>SHT</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <ul>
+                        <li>BREAK CIRCULATION</li>
+                        <li>HOT HOLE</li>
+                        <li>LC & FC DRILLING PROCEDURE</li>
+                        <li>RELOG</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <ul>
+                        <li>16" TD</li>
+                        <li>12.25" TD</li>
+                        <li>8.5" TD</li>
+                        <li>6.0" TD</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <ul>
+                        <li>16" BHA LD</li>
+                        <li>12.25" BHA LD</li>
+                        <li>8.5" BHA LD</li>
+                        <li>6.0" BHA LD</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <ul>
+                        <li>FINAL DELIVERY</li>
+                        <li>INVENTORY</li>
+                        <li class="currentli">&nbsp;BACKLOADING</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- second -->
+         <div class="TL-wrapper">
+            <div style="display: flex;flex-direction:row;flex-wrap:wrap">
+               <div class="flex" style="flex-direction: row; flex-wrap:wrap">
+                  <span
+                     style="background: #47B5FF; border-radius:50%;color:aliceblue;display: flex;justify-content: center; align-items: center;height: 50px; width: 50px;"><strong>081</strong></span>
+                  <span><b>BRRI-1076<br>RIG 08</b></span>
+               </div>
+               <div class="container">
+                  <div class="timeline-horizontal">
+                     <div class="event completed">
+                        <span class="dot">
+                           <i class="fa-solid fa-check"></i>
+                        </span>
+                        <span class="stage-name">
+                           RIG UP <br><small>
+                              11:53AM 15/05/22
+                           </small>
+                        </span>
+                     </div>
+                     <div class="event completed">
+                        <span class="dot">
+                           <i class="fa-solid fa-check"></i>
+                        </span>
+                        <span class="stage-name">
+                           BHA PU & SHT <br><small>
+                              11:53AM 15/05/22
+                           </small>
+                        </span>
+                     </div>
+                     <div class="event completed">
+                        <span class="dot">
+                           <i class="fa-solid fa-check"></i>
+                        </span>
+                        <span class="stage-name">
+                           TRIP IN<br><small>
+                              11:53AM 15/05/22
+                           </small>
+                        </span>
+                     </div>
+                     <div class="event completed">
+                        <span class="dot">
+                           <i class="fa-solid fa-check"></i>
+                        </span>
+                        <span class="stage-name">
+                           DRILLING<br><small>
+                              11:53AM 15/05/22
+                           </small>
+                        </span>
+                     </div>
+                     <div class="event completed">
+                        <span class="dot">
+                           <i class="fa-solid fa-check"></i>
+                        </span>
+                        <span class="stage-name">
+                           TRIP OUT <br><small>
+                              11:53AM 15/05/22
+                           </small>
+                        </span>
+                     </div>
+                     <div class="event current">
+                        <span class="dot">
+                           <i class="fa-solid fa-ellipsis"></i>
+                        </span>
+                        <span class="stage-name">
+                           RIG DOWN <br><small>
+                              ONGOING
+                           </small>
+                        </span>
+                     </div>
+                  </div>
+                  <div class="dropdownbtn" style="margin: 1rem; z-index: 100;" onclick="show(this)">
+                     <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+               </div>
+            </div>
+
+            <div class="dropdown">
+               <div class="container listcontainer">
+                  <div>
+                     <ul>
+                        <li>RIG UP</li>
+                        <li>WELL SETUP</li>
+                        <li>PRIMARY TOOLS</li>
+                        <li>BACK UP TOOLS</li>
+                        <li>PRE RUN REPORTS</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <ul>
+                        <li>PU CHECKLIST</li>
+                        <li>RF VERIFICATION</li>
+                        <li>SHT</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <ul>
+                        <li>BREAK CIRCULATION</li>
+                        <li>HOT HOLE</li>
+                        <li>LC & FC DRILLING PROCEDURE</li>
+                        <li>RELOG</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <ul>
+                        <li>16" TD</li>
+                        <li>12.25" TD</li>
+                        <li>8.5" TD</li>
+                        <li>6.0" TD</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <ul>
+                        <li>16" BHA LD</li>
+                        <li>12.25" BHA LD</li>
+                        <li>8.5" BHA LD</li>
+                        <li>6.0" BHA LD</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <ul>
+                        <li>FINAL DELIVERY</li>
+                        <li>INVENTORY</li>
+                        <li class="currentli">&nbsp;BACKLOADING</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- third -->
+         <div class="TL-wrapper">
+            <div style="display: flex;flex-direction:row;flex-wrap:wrap">
+               <div class="flex" style="flex-direction: row; flex-wrap:wrap">
+                  <span
+                     style="background: #47B5FF; border-radius:50%;color:aliceblue;display: flex;justify-content: center; align-items: center;height: 50px; width: 50px;"><strong>081</strong></span>
+                  <span><b>BRRI-1076<br>RIG 08</b></span>
+               </div>
+               <div class="container">
+                  <div class="timeline-horizontal">
+                     <div class="event completed">
+                        <span class="dot">
+                           <i class="fa-solid fa-check"></i>
+                        </span>
+                        <span class="stage-name">
+                           RIG UP <br><small>
+                              11:53AM 15/05/22
+                           </small>
+                        </span>
+                     </div>
+                     <div class="event completed">
+                        <span class="dot">
+                           <i class="fa-solid fa-check"></i>
+                        </span>
+                        <span class="stage-name">
+                           BHA PU & SHT <br><small>
+                              11:53AM 15/05/22
+                           </small>
+                        </span>
+                     </div>
+                     <div class="event completed">
+                        <span class="dot">
+                           <i class="fa-solid fa-check"></i>
+                        </span>
+                        <span class="stage-name">
+                           TRIP IN<br><small>
+                              11:53AM 15/05/22
+                           </small>
+                        </span>
+                     </div>
+                     <div class="event completed">
+                        <span class="dot">
+                           <i class="fa-solid fa-check"></i>
+                        </span>
+                        <span class="stage-name">
+                           DRILLING<br><small>
+                              11:53AM 15/05/22
+                           </small>
+                        </span>
+                     </div>
+                     <div class="event completed">
+                        <span class="dot">
+                           <i class="fa-solid fa-check"></i>
+                        </span>
+                        <span class="stage-name">
+                           TRIP OUT <br><small>
+                              11:53AM 15/05/22
+                           </small>
+                        </span>
+                     </div>
+                     <div class="event current">
+                        <span class="dot">
+                           <i class="fa-solid fa-ellipsis"></i>
+                        </span>
+                        <span class="stage-name">
+                           RIG DOWN <br><small>
+                              ONGOING
+                           </small>
+                        </span>
+                     </div>
+                  </div>
+                  <div class="dropdownbtn" style="margin: 1rem; z-index: 100;" onclick="show(this)">
+                     <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+               </div>
+            </div>
+
+            <div class="dropdown">
+               <div class="container listcontainer">
+                  <div>
+                     <ul>
+                        <li>RIG UP</li>
+                        <li>WELL SETUP</li>
+                        <li>PRIMARY TOOLS</li>
+                        <li>BACK UP TOOLS</li>
+                        <li>PRE RUN REPORTS</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <ul>
+                        <li>PU CHECKLIST</li>
+                        <li>RF VERIFICATION</li>
+                        <li>SHT</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <ul>
+                        <li>BREAK CIRCULATION</li>
+                        <li>HOT HOLE</li>
+                        <li>LC & FC DRILLING PROCEDURE</li>
+                        <li>RELOG</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <ul>
+                        <li>16" TD</li>
+                        <li>12.25" TD</li>
+                        <li>8.5" TD</li>
+                        <li>6.0" TD</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <ul>
+                        <li>16" BHA LD</li>
+                        <li>12.25" BHA LD</li>
+                        <li>8.5" BHA LD</li>
+                        <li>6.0" BHA LD</li>
+                     </ul>
+                  </div>
+                  <div>
+                     <ul>
+                        <li>FINAL DELIVERY</li>
+                        <li>INVENTORY</li>
+                        <li class="currentli">&nbsp;BACKLOADING</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+   </section>
+
+
+
+   <!-- BOOTSTRAP CDN -->
+   <script type="module"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+   <!-- IONICONS CDN -->
+   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+      integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="./script.js"></script>
+</body>
+
+</html>
